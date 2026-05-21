@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_comunitaria/services/supabase_service.dart';
+import 'package:app_comunitaria/services/supabase_service.dart';
 
 class NotificationsDialog extends StatelessWidget {
   const NotificationsDialog({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_comunitaria/screens/login_screen.dart';
-import 'package:flutter_app_comunitaria/services/supabase_service.dart';
+import 'package:app_comunitaria/screens/login_screen.dart';
+import 'package:app_comunitaria/services/supabase_service.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class ChangePasswordScreen extends StatefulWidget {

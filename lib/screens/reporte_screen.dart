@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:flutter_app_comunitaria/services/supabase_service.dart';
+import 'package:app_comunitaria/services/supabase_service.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class ReporteScreen extends StatefulWidget {

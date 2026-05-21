@@ -2,9 +2,10 @@ import 'dart:typed_data';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:app_comunitaria/widgets/ampliable_image.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-import 'package:flutter_app_comunitaria/services/supabase_service.dart';
+import 'package:app_comunitaria/services/supabase_service.dart';
 
 class NoticiasScreen extends StatefulWidget {
   const NoticiasScreen({super.key});
@@ -132,7 +133,7 @@ class _NoticiasScreenState extends State<NoticiasScreen> {
                         if (imagen.isNotEmpty) ...[
                           ClipRRect(
                             borderRadius: BorderRadius.circular(14),
-                            child: Image.network(
+                            child: AmpliableImage(
                               imagen,
                               height: 180,
                               width: double.infinity,

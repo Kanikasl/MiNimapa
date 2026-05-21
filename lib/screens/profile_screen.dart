@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_comunitaria/services/supabase_service.dart';
-import 'package:flutter_app_comunitaria/utilidades/edit_profile.dart';
+import 'package:app_comunitaria/services/supabase_service.dart';
+import 'package:app_comunitaria/utilidades/edit_profile.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});

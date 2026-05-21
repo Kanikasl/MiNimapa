@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app_comunitaria/screens/home_screen.dart';
-import 'package:flutter_app_comunitaria/screens/register_screen.dart';
-import 'package:flutter_app_comunitaria/screens/reset_password_screen.dart';
-import 'package:flutter_app_comunitaria/services/supabase_service.dart';
+import 'package:app_comunitaria/screens/home_screen.dart';
+import 'package:app_comunitaria/screens/register_screen.dart';
+import 'package:app_comunitaria/screens/reset_password_screen.dart';
+import 'package:app_comunitaria/services/supabase_service.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

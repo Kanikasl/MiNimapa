@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_comunitaria/services/supabase_service.dart';
+import 'package:app_comunitaria/widgets/ampliable_image.dart';
+import 'package:app_comunitaria/services/supabase_service.dart';
 
 class ProyectoScreen extends StatelessWidget {
   const ProyectoScreen({super.key});
@@ -93,7 +94,7 @@ class ProyectoScreen extends StatelessWidget {
             if (tieneImagen) ...[
               ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: Image.network(
+                child: AmpliableImage(
                   imagenUrl,
                   height: 160,
                   width: double.infinity,

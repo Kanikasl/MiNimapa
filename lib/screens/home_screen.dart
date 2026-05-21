@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_comunitaria/screens/admin_screen.dart';
-import 'package:flutter_app_comunitaria/screens/directiva_screen.dart';
-import 'package:flutter_app_comunitaria/screens/gestion_directiva_screen.dart';
-import 'package:flutter_app_comunitaria/screens/login_screen.dart';
-import 'package:flutter_app_comunitaria/screens/negocios_screen.dart';
-import 'package:flutter_app_comunitaria/screens/noticias_screen.dart';
-import 'package:flutter_app_comunitaria/screens/profile_screen.dart';
-import 'package:flutter_app_comunitaria/screens/proyecto_screen.dart';
-import 'package:flutter_app_comunitaria/screens/reporte_screen.dart';
-import 'package:flutter_app_comunitaria/services/supabase_service.dart';
-import 'package:flutter_app_comunitaria/utilidades/notifications_dialog.dart';
+import 'package:app_comunitaria/widgets/ampliable_image.dart';
+import 'package:app_comunitaria/screens/admin_screen.dart';
+import 'package:app_comunitaria/screens/directiva_screen.dart';
+import 'package:app_comunitaria/screens/gestion_directiva_screen.dart';
+import 'package:app_comunitaria/screens/login_screen.dart';
+import 'package:app_comunitaria/screens/negocios_screen.dart';
+import 'package:app_comunitaria/screens/noticias_screen.dart';
+import 'package:app_comunitaria/screens/profile_screen.dart';
+import 'package:app_comunitaria/screens/proyecto_screen.dart';
+import 'package:app_comunitaria/screens/reporte_screen.dart';
+import 'package:app_comunitaria/services/supabase_service.dart';
+import 'package:app_comunitaria/utilidades/notifications_dialog.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -294,7 +295,7 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 10),
               ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: Image.network(
+                child: AmpliableImage(
                   imageUrl,
                   height: 160,
                   width: double.infinity,
@@ -344,7 +345,7 @@ class _HomeScreenState extends State<HomeScreen> {
               if (tipoEvidencia == 'Imagen')
                 ClipRRect(
                   borderRadius: BorderRadius.circular(12),
-                  child: Image.network(evidencia, height: 160, width: double.infinity, fit: BoxFit.cover, errorBuilder: (_, __, ___) => Container(height: 120, alignment: Alignment.center, color: Colors.grey.shade300, child: const Text('No se pudo cargar la imagen'))),
+                  child: AmpliableImage(evidencia, height: 160, width: double.infinity, fit: BoxFit.cover, errorBuilder: (_, __, ___) => Container(height: 120, alignment: Alignment.center, color: Colors.grey.shade300, child: const Text('No se pudo cargar la imagen'))),
                 )
               else
                 OutlinedButton.icon(onPressed: () => launchUrl(Uri.parse(evidencia), mode: LaunchMode.externalApplication), icon: const Icon(Icons.play_circle), label: const Text('Abrir video/evidencia')),

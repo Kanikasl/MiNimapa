@@ -2,12 +2,13 @@ import 'dart:typed_data';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:app_comunitaria/widgets/ampliable_image.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:flutter_app_comunitaria/services/supabase_service.dart';
+import 'package:app_comunitaria/services/supabase_service.dart';
 
 class NegociosScreen extends StatefulWidget {
   const NegociosScreen({super.key});
@@ -179,7 +180,7 @@ class _CatalogoNegociosTabState extends State<_CatalogoNegociosTab> {
                       if (imagen.isNotEmpty) ...[
                         ClipRRect(
                           borderRadius: BorderRadius.circular(14),
-                          child: Image.network(
+                          child: AmpliableImage(
                             imagen,
                             height: 170,
                             width: double.infinity,
@@ -719,7 +720,7 @@ class _PromocionesTabState extends State<_PromocionesTab> {
                         if (imagen.isNotEmpty) ...[
                           ClipRRect(
                             borderRadius: BorderRadius.circular(14),
-                            child: Image.network(imagen, height: 150, width: double.infinity, fit: BoxFit.cover),
+                            child: AmpliableImage(imagen, height: 150, width: double.infinity, fit: BoxFit.cover),
                           ),
                           const SizedBox(height: 10),
                         ],

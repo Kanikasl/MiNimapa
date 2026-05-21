@@ -2,9 +2,10 @@ import 'dart:typed_data';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:app_comunitaria/widgets/ampliable_image.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_app_comunitaria/services/supabase_service.dart';
+import 'package:app_comunitaria/services/supabase_service.dart';
 
 class GestionDirectivaScreen extends StatefulWidget {
   const GestionDirectivaScreen({super.key});
@@ -198,7 +199,7 @@ class _GestionReportesTabState extends State<_GestionReportesTab> {
     if (tipo == 'Imagen') {
       return ClipRRect(
         borderRadius: BorderRadius.circular(10),
-        child: Image.network(
+        child: AmpliableImage(
           url,
           height: 170,
           width: double.infinity,
@@ -417,7 +418,7 @@ class _GestionProyectosTabState extends State<_GestionProyectosTab> {
                         if ((p['imagen_url']?.toString() ?? '').isNotEmpty) ...[
                           ClipRRect(
                             borderRadius: BorderRadius.circular(12),
-                            child: Image.network(
+                            child: AmpliableImage(
                               p['imagen_url'].toString(),
                               height: 150,
                               width: double.infinity,
